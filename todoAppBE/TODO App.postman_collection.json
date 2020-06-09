@@ -1,0 +1,490 @@
+{
+	"id": "2fe001ec-bc68-d771-fc41-c93e8fd322f8",
+	"name": "TODO App",
+	"description": "",
+	"order": [
+		"f67fc71c-cc1d-0646-81d9-c92c0f42faa7",
+		"a6874a1c-fc50-b692-cd82-f36a97c76edf",
+		"01e4553f-9f6d-a21a-3d8c-581e0475439c",
+		"7296aea6-24a7-18aa-49a9-2b733549ff7c",
+		"99d1bab2-4fc3-0c1b-15e1-3e07679680bc"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1591096836509,
+	"owner": "10320235",
+	"public": false,
+	"requests": [
+		{
+			"id": "01e4553f-9f6d-a21a-3d8c-581e0475439c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8090/todoapp/api/v1/task",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "2fe001ec-bc68-d771-fc41-c93e8fd322f8",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get All tasks",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1591127717809,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 99,
+					"headers": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 03 Jun 2020 07:58:03 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":2,\"userId\":1,\"description\":\"Task 2 updated\",\"createdDate\":1591093906000,\"modifiedDate\":1591102817000,\"deleted\":false},{\"id\":3,\"userId\":1,\"description\":\"Task 1\",\"createdDate\":1591097535000,\"modifiedDate\":1591097535000,\"deleted\":false},{\"id\":6,\"userId\":1,\"description\":\"Task 1\",\"createdDate\":1591168895000,\"modifiedDate\":1591168893000,\"deleted\":false},{\"id\":7,\"userId\":1,\"description\":\"Task 1\",\"createdDate\":1591170850000,\"modifiedDate\":1591170850000,\"deleted\":false}]",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "Get All tasks -200",
+					"id": "53f171b2-e484-5bd1-4858-351d971a495e",
+					"request": {
+						"url": "http://localhost:8090/todoapp/api/v1/task",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"headers": "",
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "7296aea6-24a7-18aa-49a9-2b733549ff7c",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8090/todoapp/api/v1/task/cerb_usr_001",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "2fe001ec-bc68-d771-fc41-c93e8fd322f8",
+			"data": null,
+			"dataMode": "params",
+			"name": "Get all tasks by username",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1591127795624,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 382,
+					"headers": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 03 Jun 2020 07:22:19 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":2,\"userId\":1,\"description\":\"Task 2 updated\",\"createdDate\":1591093906000,\"modifiedDate\":1591102817000,\"deleted\":false},{\"id\":3,\"userId\":1,\"description\":\"Task 1\",\"createdDate\":1591097535000,\"modifiedDate\":1591097535000,\"deleted\":false},{\"id\":6,\"userId\":1,\"description\":\"Task 1\",\"createdDate\":1591168895000,\"modifiedDate\":1591168893000,\"deleted\":false}]",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "Get all tasks by username -200",
+					"id": "8fe7f091-016e-fc43-c85e-6d142e52e388",
+					"request": {
+						"url": "http://localhost:8090/todoapp/api/v1/task/cerb_usr_001",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"headers": "",
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "99d1bab2-4fc3-0c1b-15e1-3e07679680bc",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8090/todoapp/api/v1/task/2",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "2fe001ec-bc68-d771-fc41-c93e8fd322f8",
+			"data": null,
+			"dataMode": "params",
+			"name": "Delete task",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1591176937675,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 278,
+					"headers": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 03 Jun 2020 09:28:55 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":2,\"userId\":1,\"user_name\":\"cerb_usr_001\",\"task_description\":\"Task 2 updated\",\"createdDate\":1591093906000,\"modifiedDate\":1591102817000,\"deleted\":true}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "Delete task",
+					"id": "9b6a7d56-2b21-9881-5377-a7e7424d1248",
+					"request": {
+						"url": "http://localhost:8090/todoapp/api/v1/task/2",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"headers": "",
+						"data": null,
+						"method": "DELETE",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "a6874a1c-fc50-b692-cd82-f36a97c76edf",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8090/todoapp/api/v1/task",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1591171074517,
+			"name": "Update task",
+			"description": "",
+			"collectionId": "2fe001ec-bc68-d771-fc41-c93e8fd322f8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 177,
+					"headers": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 02 Jun 2020 13:00:17 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":2,\"user_name\":\"cerb_usr_001\",\"task_description\":\"Task 2 updated\",\"modifiedDate\":1591102817432}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "Update task - 200",
+					"id": "5ff11461-003a-12eb-2c62-c23a2b619e44",
+					"request": {
+						"url": "http://localhost:8090/todoapp/api/v1/task",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"enabled": true
+							}
+						],
+						"headers": "Content-Type: application/json\n",
+						"data": "{\t\n\t\"id\":2,\n\t\"task_description\": \"Task 2 updated\",\n\t\"user_name\":\"cerb_usr_001\"\n}",
+						"method": "PUT",
+						"dataMode": "raw"
+					}
+				}
+			]
+		},
+		{
+			"id": "f67fc71c-cc1d-0646-81d9-c92c0f42faa7",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8090/todoapp/api/v1/task",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1591170972772,
+			"name": "Create task",
+			"description": "",
+			"collectionId": "2fe001ec-bc68-d771-fc41-c93e8fd322f8",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 201,
+						"name": "Created",
+						"detail": "The request has been fulfilled and resulted in a new resource being created."
+					},
+					"time": 1490,
+					"headers": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Wed, 03 Jun 2020 07:54:10 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=60",
+							"description": "Custom header"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\"id\":7,\"userId\":1,\"user_name\":\"cerb_usr_001\",\"task_description\":\"Task 1\",\"createdDate\":1591170850165,\"modifiedDate\":1591170850165,\"deleted\":false}",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "Create task - 201",
+					"id": "f9806a89-597f-db7a-b4b9-221cabc3a964",
+					"request": {
+						"url": "http://localhost:8090/todoapp/api/v1/task",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"enabled": true
+							}
+						],
+						"headers": "Content-Type: application/json\n",
+						"data": "{\n\t\"task_description\": \"Task 1\",\n\t\"user_name\":\"cerb_usr_001\"\n}",
+						"method": "POST",
+						"dataMode": "raw"
+					}
+				}
+			]
+		}
+	]
+}

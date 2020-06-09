@@ -1,0 +1,30 @@
+  apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
+  metadata: 
+    labels:
+      app: todoapp-ui
+      deploymentconfig: todoapp-ui
+    name: todoapp-ui
+  spec:
+    replicas: 1
+    selector:
+      app: todoapp-ui
+      deploymentconfig: todoapp-ui
+    strategy:
+      type: Rolling
+    template:
+      metadata:
+        labels:
+          app: todoapp-ui
+          deploymentconfig: todoapp-ui
+      spec:
+        containers:
+        - image: docker.io/escortnotice/todoappui:latest
+          imagePullPolicy: Always
+          name: todoapp-ui
+          ports:
+          - containerPort: 3000
+            name: http
+            protocol: TCP
+          securityContext:
+            privileged: false

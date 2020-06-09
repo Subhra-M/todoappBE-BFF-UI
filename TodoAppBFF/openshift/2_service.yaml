@@ -1,0 +1,17 @@
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: todoappbff
+    labels:
+      app: todoapp-bff
+      deploymentconfig: todoapp-bff
+  spec:
+    ports:
+    - name: 4000-tcp
+      port: 4000
+      protocol: TCP
+      targetPort: 4000
+    selector:
+      app: todoapp-bff
+      deploymentconfig: todoapp-bff
+    type: ClusterIP

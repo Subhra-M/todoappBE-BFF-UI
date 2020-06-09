@@ -1,0 +1,5 @@
+1) oc create -f openshift/1_deployment.yaml
+
+2) oc create -f openshift/2_service.yaml
+
+3) oc create -f openshift/3_route.yaml

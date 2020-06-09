@@ -1,0 +1,35 @@
+  apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
+  metadata: 
+    labels:
+      app: todoapp-bff
+      deploymentconfig: todoapp-bff
+    name: todoapp-bff
+  spec:
+    replicas: 1
+    selector:
+      app: todoapp-bff
+      deploymentconfig: todoapp-bff
+    strategy:
+      type: Rolling
+    template:
+      metadata:
+        labels:
+          app: todoapp-bff
+          deploymentconfig: todoapp-bff
+      spec:
+        containers:
+        - env:
+          - name: BASEURL
+            value: http://todoappbe:8090/todoapp/api/v1/task/
+          - name: PORT
+            value: "4000"
+          image: docker.io/escortnotice/todoappbff:latest
+          imagePullPolicy: Always
+          name: todoapp-bff
+          ports:
+          - containerPort: 4000
+            name: http
+            protocol: TCP
+          securityContext:
+            privileged: false

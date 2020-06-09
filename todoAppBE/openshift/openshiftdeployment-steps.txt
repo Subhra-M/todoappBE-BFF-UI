@@ -1,0 +1,9 @@
+1) oc create configmap todoapp-props-configmap --from-file=src/main/resources/application.properties
+
+2) oc create configmap todoapp-dbchangelog-configmap --from-file=src/main/resources/db/changelog/db.changelog-master.xml
+
+3) oc create -f openshift/1_db-secret.yaml
+
+4) oc create -f openshift/2_deployment.yaml
+
+5)

@@ -1,0 +1,52 @@
+  apiVersion: apps.openshift.io/v1
+  kind: DeploymentConfig
+  metadata: 
+    labels:
+      app: todoapp-api
+      deploymentconfig: todoapp-api
+    name: todoapp-api
+  spec:
+    replicas: 1
+    selector:
+      app: todoapp-api
+      deploymentconfig: todoapp-api
+    strategy:
+      type: Rolling
+    template:
+      metadata:
+        labels:
+          app: todoapp-api
+          deploymentconfig: todoapp-api
+      spec:
+        containers:
+        - env:
+          - name: DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                key: user
+                name: my-database-secret
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                key: password
+                name: my-database-secret
+          image: docker.io/escortnotice/todoappbe:latest
+          imagePullPolicy: Always
+          name: todoapp-api
+          ports:
+          - containerPort: 8089
+            name: http
+            protocol: TCP
+          securityContext:
+            privileged: false
+          volumeMounts:
+          - mountPath: /deployments/config
+            name: application-config
+            readOnly: true
+        volumes:
+        - name: application-config
+          configMap:
+            name: todoapp-props-configmap
+            items:
+            - key: application.properties
+              path: application.properties
